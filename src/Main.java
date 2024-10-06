@@ -5,28 +5,26 @@ public class Main {
 
         //task1, 2 i compared first and second tasks
         byte clientOS = 0;
-        short yearOfProduct = 2000;
+        short clientDeviceYear = 2000;
 
-        if (yearOfProduct >= 2015) {
-            switch (clientOS) {
-                case 0:
-                    System.out.println("Установите версию приложения для iOS по ссылке");
-                    break;
-                case 1:
-                    System.out.println("Установите версию приложения для Android по ссылке");
-                    break;
-                default:
-                    System.out.println("я не знаю такой платформы");
+        if (clientDeviceYear >= 2015) {
+            if (clientOS == 0) {
+                System.out.println("Установите версию приложения для " + clientOS + " по ссылке");
             }
-        } else if (yearOfProduct < 2015) {
-            switch (clientOS) {
-                case 0:
-                    System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-                    break;
-                case 1:
-                    System.out.println("Установите облегченную версию приложения для Android по ссылке");
-                    break;
-                default:
+            else if (clientOS == 1){
+                System.out.println("Установите версию приложения для " + clientOS + " по ссылке");
+            }
+            else {
+                System.out.println("я не знаю такой платформы");
+            }
+        } else if (clientDeviceYear < 2015) {
+            if (clientOS == 0) {
+                System.out.println("Установите облегченную версию приложения для " + clientOS + " по ссылке");
+            }
+            else if (clientOS == 1) {
+                System.out.println("Установите облегченную версию приложения для " + clientOS + " по ссылке");
+            }
+            else {
                     System.out.println("я не знаю такой платформы");
             }
         }
@@ -34,7 +32,7 @@ public class Main {
 
         short year = 2000;
 
-        if (year % 4 == 0 && year % 100 != 0 && year > 1584) {
+        if (year % 4 == 0 && year % 100 != 0 && year > 1584 && year % 400 == 0) {
             System.out.println(year + " год високосный");
         }
 
