@@ -32,7 +32,7 @@ public class Main {
 
         short year = 2000;
 
-        if (year % 4 == 0 && year % 100 != 0 && year > 1584 && year % 400 == 0) {
+        if (year % 4 == 0 && year > 1584 && year % 400 == 0 && year % 100 != 0) {
             System.out.println(year + " год високосный");
         }
 
