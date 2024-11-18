@@ -25,18 +25,19 @@ public class Main {
                 System.out.println("Установите облегченную версию приложения для " + clientOS + " по ссылке");
             }
             else {
-                    System.out.println("я не знаю такой платформы");
+                System.out.println("я не знаю такой платформы");
             }
         }
         //task3
 
-        short year = 2000;
-
-        if (year % 4 == 0 && year > 1584 && year % 400 == 0 && year % 100 != 0) {
+        short year = 2024;
+        if (year % 4 == 0 && year > 1584){
             System.out.println(year + " год високосный");
         }
-
-        else{
+        else if (year % 100 == 0 && year % 400 == 0){
+            System.out.println(year + " год високосный");
+        }
+        else {
             System.out.println(year + " год не является високосным");
         }
 
