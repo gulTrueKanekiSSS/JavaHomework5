@@ -30,15 +30,15 @@ public class Main {
         }
         //task3
 
-        short year = 2024;
-        if (year % 4 == 0 && year > 1584){
+        short year = 1700;
+        if (year % 400 == 0 && year > 1584){
             System.out.println(year + " год високосный");
         }
-        else if (year % 100 == 0 && year % 400 == 0){
+        else if (year % 4 == 0 && year % 100 != 0){
             System.out.println(year + " год високосный");
         }
         else {
-            System.out.println(year + " год не является високосным");
+            System.out.println(year + " год не високосный");
         }
 
         //task4
